@@ -177,6 +177,9 @@ spec:
           volumeMounts:
             - name: lldap-secrets
               mountPath: /secrets/
+              {{- if not .Values.createSecret }}
+              readOnly: true
+              {{- end }}
             - name: lldap-data
               mountPath: /data/
       volumes:
