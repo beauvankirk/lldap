@@ -53,6 +53,9 @@ replicaCount: 1
 ## @param resources Limit resources for the conainers
 ##
 resources: {}
+## @param createSecret Create secret automatically. Set to false for manual or sealed-secrets management
+##
+createSecret: true
 ## @param secretAnnotations Annotations to add to secret
 ##
 secretAnnotations: {}
